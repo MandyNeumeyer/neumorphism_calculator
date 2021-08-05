@@ -8,6 +8,7 @@
 
 body{
     height:100vh;
+    font-size: 2rem;
     font-family: 'Bebas Neue', cursive;
     background: #ADA996;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
@@ -24,7 +25,6 @@ body{
     align-content: center;
     grid-template-columns: repeat(4,90px);
     grid-template-rows: minmax(150px, auto)repeat(5,90px);
-    font-size: 2rem;
     background: linear-gradient(145deg, #d0d0d0, #afafaf);
     border:10px outset #fff
     
