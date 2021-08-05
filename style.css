@@ -29,8 +29,8 @@ body{
     grid-template-columns: repeat(4,90px);
     grid-template-rows: minmax(150px, auto)repeat(5,90px);
     background: linear-gradient(145deg, #d0d0d0, #afafaf);
-    border:10px outset #fff
-    
+    border:10px outset #fff;
+    box-shadow: 2px 2px 4px rgb(88, 87, 87);
 }
 
 .calculator-wrapper>button{
@@ -78,3 +78,4 @@ button.span-two{
 .red{
     color:red;
 }
+
