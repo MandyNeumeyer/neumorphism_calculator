@@ -1,32 +1,103 @@
 *,::before,::after{
     box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+body{
+    height:100vh;
+    background-color: #ececec;
+}
+
+.toggle-container{
+    height:120px;
+    width:250px;
+    box-shadow: -7px -7px 15px
+    rgba(255,255,255,0.65),
+    7px 7px 15px 
+    rgba(70,70,70,0.12);
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+    position: absolute;
+    right:20%;
+    top:10px;
+}
+input[type="checkbox"]{
+    position: absolute;
+    appearance: none;
+    height:80px;
+    width:160px;
+    box-shadow: -7px -7px 15px
+    rgba(255,255,255,0.65),
+    7px 7px 15px 
+    rgba(70,70,70,0.12),
+    inset -7px -7px 15px
+    rgba(255,255,255,0.65),
+    inset 7px 7px 15px
+    rgba(70,70,70,0.12);
+    border-radius:40px;
+    border:5px solid #ececec;
+    left:15px;
+    outline:none;
+    cursor: pointer;
+}
+input[type="checkbox"]:before,
+input[type="checkbox"]:after{
+    content:"";
+    position: absolute;
+    margin: auto;
+    top:0;
+    bottom: 0;
+    transition: 0.3s;
+}
+input[type="checkbox"]:before{
+    height:50px;
+    width:50px;
+    background-color: #ececec;
+    box-shadow: -7px -7px 15px
+    rgba(255,255,255,0.65),
+    7px 7px 15px 
+    rgba(70,70,70,0.12);
+    border-radius: 50%;
+    left:15px;
+}
+input[type="checkbox"]:after{
+    height:15px;
+    width:15px;
+    background-color: #7a7a7a;
+    border-radius: 50%;
+    right:-55px;
+}  
+
+input[type="checkbox"]:checked:before{
+    left:86px;
 
 }
-body{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    min-height:100vh;
-}
+input[type="checkbox"]:checked:after{
+    background-color: #55f696;
+}   
+
 
 .calculator-wrapper{
-    width:500px;
-    min-height:750px;
+    margin:5% auto;
+    width:400px;
+    min-height:650px;
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(4,100px);
-    grid-template-rows: minmax(120px, auto)repeat(5,100px);
+    grid-template-columns: repeat(4,90px);
+    grid-template-rows: minmax(150px, auto)repeat(5,90px);
     font-size: 2rem;
-    border-radius: 3rem;
+    border-radius: 1.5rem;
     background-color: teal;
 }
 
 .calculator-wrapper>button{
     margin:auto auto;
     font-size: 2rem;
-    width:90px;
-    height:90px;
+    width:75px;
+    height:75px;
     border-radius: 50%;
 }
 
@@ -47,5 +118,7 @@ button.span-two{
     flex-direction: column;
     justify-content: space-between;
     color:wheat;
-    padding:5px;
+    padding:20px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
